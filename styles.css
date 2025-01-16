@@ -1,0 +1,107 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+header {
+  text-align: center;
+  padding: 20px;
+  background-color: #f4f4f4;
+}
+
+.image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ddd;
+  height: 200px;
+  margin: 20px 0;
+}
+
+.image-placeholder {
+  font-size: 24px;
+  color: #777;
+}
+
+.info {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.ingredients,
+.time {
+  flex: 1;
+  margin: 0 10px;
+}
+.ingredients h2,
+.time h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+.ingredients ul,
+.time ul {
+  padding: 0;
+  list-style: none;
+}
+.ingredients ul li,
+.time ul li {
+  margin-bottom: 10px;
+}
+.ingredients .time-buttons button,
+.ingredients .start,
+.time .time-buttons button,
+.time .start {
+  margin: 5px;
+  padding: 10px;
+  font-size: 16px;
+  cursor: pointer;
+}
+.ingredients .start,
+.time .start {
+  background-color: #333;
+  color: white;
+  border: none;
+}
+
+.preparation {
+  padding: 20px;
+}
+.preparation h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+.preparation ol {
+  list-style: none;
+  counter-reset: step-counter;
+}
+.preparation ol li {
+  display: flex;
+  margin-bottom: 20px;
+}
+.preparation ol li .step-number {
+  width: 30px;
+  height: 30px;
+  background-color: #333;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  margin-right: 10px;
+  counter-increment: step-counter;
+  content: counter(step-counter);
+}
+.preparation ol li p {
+  margin: 0;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #f4f4f4;
+}
+
+/*# sourceMappingURL=styles.css.map */

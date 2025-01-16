@@ -1,0 +1,110 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+  }
+  
+  header {
+    text-align: center;
+    padding: 20px;
+    background-color: #f4f4f4;
+  }
+  
+  .image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ddd;
+    height: 200px;
+    margin: 20px 0;
+  }
+  
+  .image-placeholder {
+    font-size: 24px;
+    color: #777;
+  }
+  
+  .info {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+  }
+  
+  .ingredients,
+  .time {
+    flex: 1;
+    margin: 0 10px;
+  
+    h2 {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+  
+    ul {
+      padding: 0;
+      list-style: none;
+  
+      li {
+        margin-bottom: 10px;
+      }
+    }
+  
+    .time-buttons button,
+    .start {
+      margin: 5px;
+      padding: 10px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+  
+    .start {
+      background-color: #333;
+      color: white;
+      border: none;
+    }
+  }
+  
+  .preparation {
+    padding: 20px;
+  
+    h2 {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+  
+    ol {
+      list-style: none;
+      counter-reset: step-counter;
+  
+      li {
+        display: flex;
+        margin-bottom: 20px;
+  
+        .step-number {
+          width: 30px;
+          height: 30px;
+          background-color: #333;
+          color: white;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border-radius: 50%;
+          margin-right: 10px;
+          counter-increment: step-counter;
+          content: counter(step-counter);
+        }
+  
+        p {
+          margin: 0;
+        }
+      }
+    }
+  }
+  
+  footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #f4f4f4;
+  }
+  
