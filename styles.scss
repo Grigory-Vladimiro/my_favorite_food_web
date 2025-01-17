@@ -1,110 +1,168 @@
+$main-color: #333;
+$secondary-color: #f4f4f4;
+$highlight-color: #777;
+$background-color: #ddd;
+
 body {
-    font-family: Arial, sans-serif;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: $secondary-color;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.page {
+  width: 210mm; // ширина A4
+  height: 297mm; // высота A4
+  background: white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  text-align: center;
+  padding: 20px 0;
+  background-color: $secondary-color;
+
+  h1 {
     margin: 0;
-    padding: 0;
-    color: #333;
+    font-size: 24px;
+    color: $main-color;
   }
-  
-  header {
-    text-align: center;
-    padding: 20px;
-    background-color: #f4f4f4;
-  }
-  
-  .image {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #ddd;
-    height: 200px;
-    margin: 20px 0;
-  }
-  
+}
+
+.image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $background-color;
+  height: 120mm; // 40% высоты A4
+  margin: 10px 0;
+
   .image-placeholder {
     font-size: 24px;
-    color: #777;
+    color: $highlight-color;
   }
-  
-  .info {
-    display: flex;
-    justify-content: space-between;
-    padding: 20px;
-  }
-  
+}
+
+.info {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+
   .ingredients,
   .time {
     flex: 1;
     margin: 0 10px;
-  
+
     h2 {
       font-size: 20px;
       margin-bottom: 10px;
     }
-  
+
     ul {
       padding: 0;
       list-style: none;
-  
+
       li {
-        margin-bottom: 10px;
+        margin-bottom: 8px;
+        font-size: 14px;
+
+        input {
+          margin-right: 10px;
+        }
       }
     }
-  
+
     .time-buttons button,
     .start {
       margin: 5px;
-      padding: 10px;
-      font-size: 16px;
+      padding: 8px 15px;
+      font-size: 14px;
       cursor: pointer;
-    }
-  
-    .start {
-      background-color: #333;
+      background-color: $highlight-color;
       color: white;
       border: none;
+      border-radius: 4px;
+
+      &:hover {
+        background-color: lighten($highlight-color, 10%);
+      }
     }
-  }
-  
-  .preparation {
-    padding: 20px;
-  
-    h2 {
-      font-size: 24px;
-      margin-bottom: 20px;
-    }
-  
-    ol {
-      list-style: none;
-      counter-reset: step-counter;
-  
-      li {
-        display: flex;
-        margin-bottom: 20px;
-  
-        .step-number {
-          width: 30px;
-          height: 30px;
-          background-color: #333;
-          color: white;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          border-radius: 50%;
-          margin-right: 10px;
-          counter-increment: step-counter;
-          content: counter(step-counter);
-        }
-  
-        p {
-          margin: 0;
-        }
+
+    .start {
+      background-color: $main-color;
+
+      &:hover {
+        background-color: lighten($main-color, 10%);
       }
     }
   }
-  
-  footer {
-    text-align: center;
-    padding: 20px;
-    background-color: #f4f4f4;
+}
+
+.preparation {
+  flex-grow: 1;
+
+  h2 {
+    font-size: 20px;
+    margin-bottom: 15px;
   }
-  
+
+  ol {
+    list-style: none;
+    counter-reset: step-counter;
+
+    li {
+      display: flex;
+      margin-bottom: 15px;
+
+      .step-number {
+        width: 30px;
+        height: 30px;
+        background-color: $main-color;
+        color: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        margin-right: 10px;
+        font-size: 14px;
+        font-weight: bold;
+        counter-increment: step-counter;
+        content: counter(step-counter);
+      }
+
+      p {
+        margin: 0;
+        font-size: 14px;
+      }
+    }
+  }
+}
+
+footer {
+  text-align: center;
+  margin-top: auto;
+  padding: 10px;
+  background-color: $secondary-color;
+
+  p {
+    font-size: 12px;
+    margin: 0;
+    color: $main-color;
+
+    a {
+      color: $main-color;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
