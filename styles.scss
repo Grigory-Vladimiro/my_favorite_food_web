@@ -243,17 +243,22 @@ body {
 
 footer {
   border-top: 1px solid $highlight-color; // Горизонтальная линия
-  padding: 10px 20px;
+  padding: 10px 20px; // Внутренние отступы сверху, снизу и по бокам
+  display: flex;
+  align-items: center; // Центровка элементов по вертикали
 
   .footer-content {
     display: flex;
-    justify-content: space-between; // Иконки справа, текст слева
-    align-items: center;
+    justify-content: space-between; // Текст слева, иконки справа
+    align-items: center; // Центровка внутри блока
     width: 100%;
+    max-width: 900px; // Ограничение ширины содержимого
+    margin: 0 auto; // Центровка содержимого в футере
 
     p {
       font-size: 12px;
       color: $main-color;
+      margin: 0; // Убираем лишние внешние отступы
 
       a {
         color: $main-color;
@@ -281,3 +286,5 @@ footer {
     }
   }
 }
+
+
