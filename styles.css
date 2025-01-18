@@ -67,6 +67,7 @@ body {
 .info .ingredients-banner .ingredients h2 {
   font-size: 20px;
   margin-bottom: 10px;
+  text-align: left;
   color: #333;
 }
 .info .ingredients-banner .ingredients ul {
@@ -166,6 +167,43 @@ body {
 }
 .info .time .timer-display .start:hover {
   background-color: rgb(144.5, 144.5, 144.5);
+}
+
+.preparation {
+  padding: 20px;
+}
+.preparation h2 {
+  font-size: 20px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  text-align: left;
+  padding-left: 20px;
+}
+.preparation .steps-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+.preparation .steps-grid .step {
+  display: flex;
+  align-items: flex-start;
+}
+.preparation .steps-grid .step .step-number {
+  width: 40px;
+  height: 40px;
+  background-color: #777;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  margin-right: 10px;
+}
+.preparation .steps-grid .step p {
+  font-size: 16px;
+  margin: 0;
 }
 
 footer {

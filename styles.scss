@@ -3,7 +3,7 @@ $secondary-color: #f4f4f4;
 $highlight-color: #777;
 
 body {
-  font-family: 'Roboto', Arial, sans-serif; // Устанавливаем Roboto
+  font-family: 'Roboto', Arial, sans-serif;
   margin: 0;
   padding: 0;
   background-color: $secondary-color;
@@ -74,6 +74,7 @@ body {
       h2 {
         font-size: 20px;
         margin-bottom: 10px;
+        text-align: left;
         color: $main-color;
       }
 
@@ -192,6 +193,48 @@ body {
         &:hover {
           background-color: lighten($highlight-color, 10%);
         }
+      }
+    }
+  }
+}
+
+.preparation {
+  padding: 20px;
+
+  h2 {
+    font-size: 20px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    text-align: left; // Выравнивание по левому краю
+    padding-left: 20px;
+  }
+
+  .steps-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); // Две колонки
+    gap: 20px;
+
+    .step {
+      display: flex;
+      align-items: flex-start;
+
+      .step-number {
+        width: 40px;
+        height: 40px;
+        background-color: $highlight-color;
+        color: white;
+        font-size: 18px;
+        font-weight: bold;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 4px;
+        margin-right: 10px;
+      }
+
+      p {
+        font-size: 16px;
+        margin: 0;
       }
     }
   }
