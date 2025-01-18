@@ -25,14 +25,15 @@ body {
 
   header {
     padding: 20px 0;
-    background: none; // Убираем фон
+    background: none;
+
     h1 {
       margin: 0;
       font-size: 24px;
       font-weight: bold;
-      text-align: left; // Выравнивание по левому краю
+      text-align: left;
       padding-left: 20px;
-      color: $main-color; // Цвет текста
+      color: $main-color;
     }
   }
 }
@@ -41,13 +42,12 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: $background-color;
-  height: 120mm; // 40% высоты A4
-  margin: 10px 0;
+  height: 120mm;
 
-  .image-placeholder {
-    font-size: 24px;
-    color: $highlight-color;
+  img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
   }
 }
 
@@ -56,10 +56,9 @@ body {
   justify-content: space-between;
   padding: 10px 0;
 
-  .ingredients,
-  .time {
-    flex: 1;
-    margin: 0 10px;
+  .ingredients {
+    flex: 2; // Больше места для ингредиентов
+    margin-right: 20px;
 
     h2 {
       font-size: 20px;
@@ -67,11 +66,15 @@ body {
     }
 
     ul {
-      padding: 0;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr); // 3 колонки
+      gap: 10px;
       list-style: none;
+      padding: 0;
 
       li {
-        margin-bottom: 8px;
+        display: flex;
+        align-items: center;
         font-size: 14px;
 
         input {
@@ -79,25 +82,49 @@ body {
         }
       }
     }
+  }
 
-    .time-buttons button,
-    .start {
-      margin: 5px;
-      padding: 8px 15px;
-      font-size: 14px;
-      cursor: pointer;
-      background-color: $highlight-color;
-      color: white;
-      border: none;
-      border-radius: 4px;
+  .time {
+    flex: 1; // Уже блок Time
+    text-align: right;
 
-      &:hover {
-        background-color: lighten($highlight-color, 10%);
+    h2 {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+
+    .time-buttons {
+      margin-bottom: 10px;
+
+      button {
+        margin: 5px;
+        padding: 8px 15px;
+        font-size: 14px;
+        cursor: pointer;
+        background-color: $highlight-color;
+        color: white;
+        border: none;
+        border-radius: 4px;
+
+        &:hover {
+          background-color: lighten($highlight-color, 10%);
+        }
       }
     }
 
     .start {
+      padding: 10px 20px;
+      font-size: 16px;
       background-color: $main-color;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
 
       &:hover {
         background-color: lighten($main-color, 10%);
@@ -165,18 +192,5 @@ footer {
         text-decoration: underline;
       }
     }
-  }
-}
-.image {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 120mm; // Подгоняем под формат A4
-
-
-  img {
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: cover; // Заполняет блок, обрезая лишнее, сохраняя пропорции
   }
 }

@@ -35,13 +35,12 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #ddd;
   height: 120mm;
-  margin: 10px 0;
 }
-.image .image-placeholder {
-  font-size: 24px;
-  color: #777;
+.image img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
 }
 
 .info {
@@ -49,34 +48,45 @@ body {
   justify-content: space-between;
   padding: 10px 0;
 }
-.info .ingredients,
+.info .ingredients {
+  flex: 2;
+  margin-right: 20px;
+}
+.info .ingredients h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+.info .ingredients ul {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  list-style: none;
+  padding: 0;
+}
+.info .ingredients ul li {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+}
+.info .ingredients ul li input {
+  margin-right: 10px;
+}
 .info .time {
   flex: 1;
-  margin: 0 10px;
+  text-align: right;
 }
-.info .ingredients h2,
 .info .time h2 {
   font-size: 20px;
   margin-bottom: 10px;
 }
-.info .ingredients ul,
-.info .time ul {
-  padding: 0;
-  list-style: none;
+.info .time p {
+  font-size: 16px;
+  margin-bottom: 10px;
 }
-.info .ingredients ul li,
-.info .time ul li {
-  margin-bottom: 8px;
-  font-size: 14px;
+.info .time .time-buttons {
+  margin-bottom: 10px;
 }
-.info .ingredients ul li input,
-.info .time ul li input {
-  margin-right: 10px;
-}
-.info .ingredients .time-buttons button,
-.info .ingredients .start,
-.info .time .time-buttons button,
-.info .time .start {
+.info .time .time-buttons button {
   margin: 5px;
   padding: 8px 15px;
   font-size: 14px;
@@ -86,17 +96,18 @@ body {
   border: none;
   border-radius: 4px;
 }
-.info .ingredients .time-buttons button:hover,
-.info .ingredients .start:hover,
-.info .time .time-buttons button:hover,
-.info .time .start:hover {
+.info .time .time-buttons button:hover {
   background-color: rgb(144.5, 144.5, 144.5);
 }
-.info .ingredients .start,
 .info .time .start {
+  padding: 10px 20px;
+  font-size: 16px;
   background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }
-.info .ingredients .start:hover,
 .info .time .start:hover {
   background-color: rgb(76.5, 76.5, 76.5);
 }
@@ -153,18 +164,6 @@ footer p a {
 }
 footer p a:hover {
   text-decoration: underline;
-}
-
-.image {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 120mm;
-}
-.image img {
-  max-width: 100%;
-  max-height: 100%;
-  object-fit: cover;
 }
 
 /*# sourceMappingURL=styles.css.map */
