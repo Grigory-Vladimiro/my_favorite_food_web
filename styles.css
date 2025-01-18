@@ -50,7 +50,8 @@ body {
 }
 .info .ingredients {
   flex: 2;
-  margin-right: 20px;
+  margin-left: 20px;
+  margin-right: 10px;
 }
 .info .ingredients h2 {
   font-size: 20px;
@@ -73,6 +74,7 @@ body {
 }
 .info .time {
   flex: 1;
+  margin-right: 20px;
   text-align: right;
 }
 .info .time h2 {
@@ -83,11 +85,18 @@ body {
   font-size: 16px;
   margin-bottom: 10px;
 }
+.info .time p .total-time {
+  font-weight: bold;
+  color: #333;
+}
 .info .time .time-buttons {
   margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
 }
 .info .time .time-buttons button {
-  margin: 5px;
+  margin: 5px 0;
   padding: 8px 15px;
   font-size: 14px;
   cursor: pointer;
@@ -98,18 +107,6 @@ body {
 }
 .info .time .time-buttons button:hover {
   background-color: rgb(144.5, 144.5, 144.5);
-}
-.info .time .start {
-  padding: 10px 20px;
-  font-size: 16px;
-  background-color: #333;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-.info .time .start:hover {
-  background-color: rgb(76.5, 76.5, 76.5);
 }
 
 .preparation {

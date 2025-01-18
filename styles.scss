@@ -58,7 +58,8 @@ body {
 
   .ingredients {
     flex: 2; // Больше места для ингредиентов
-    margin-right: 20px;
+    margin-left: 20px; // Отступ от левого края
+    margin-right: 10px; // Дополнительный отступ между Ingredients и Time
 
     h2 {
       font-size: 20px;
@@ -86,6 +87,7 @@ body {
 
   .time {
     flex: 1; // Уже блок Time
+    margin-right: 20px; // Отступ от правого края
     text-align: right;
 
     h2 {
@@ -96,13 +98,21 @@ body {
     p {
       font-size: 16px;
       margin-bottom: 10px;
+
+      .total-time {
+        font-weight: bold;
+        color: $main-color;
+      }
     }
 
     .time-buttons {
       margin-bottom: 10px;
+      display: flex;
+      flex-direction: column; // Кнопки расположены вертикально
+      align-items: flex-end; // Выравниваем кнопки вправо
 
       button {
-        margin: 5px;
+        margin: 5px 0; // Отступы между кнопками
         padding: 8px 15px;
         font-size: 14px;
         cursor: pointer;
@@ -114,20 +124,6 @@ body {
         &:hover {
           background-color: lighten($highlight-color, 10%);
         }
-      }
-    }
-
-    .start {
-      padding: 10px 20px;
-      font-size: 16px;
-      background-color: $main-color;
-      color: white;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-
-      &:hover {
-        background-color: lighten($main-color, 10%);
       }
     }
   }
