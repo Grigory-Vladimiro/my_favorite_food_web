@@ -1,7 +1,6 @@
 $main-color: #333;
 $secondary-color: #f4f4f4;
 $highlight-color: #777;
-$background-color: #ddd;
 
 body {
   font-family: Arial, sans-serif;
@@ -39,10 +38,12 @@ body {
 }
 
 .image {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 120mm;
+  z-index: 2; // Изображение на верхнем слое
 
   img {
     max-width: 100%;
@@ -56,38 +57,50 @@ body {
   justify-content: space-between;
   padding: 10px 0;
 
-  .ingredients {
-    flex: 2; // Больше места для ингредиентов
-    margin-left: 20px; // Отступ от левого края
-    margin-right: 10px; // Дополнительный отступ между Ingredients и Time
+  .ingredients-banner {
+    flex: 2;
+    position: relative;
+    background-color: $highlight-color;
+    border-radius: 20px;
+    margin-left: 20px;
+    margin-right: 10px;
+    padding: 20px;
+    top: -30px;
+    z-index: 1; // Баннер под изображением
 
-    h2 {
-      font-size: 20px;
-      margin-bottom: 10px;
-    }
+    .ingredients {
+      position: relative;
 
-    ul {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr); // 3 колонки
-      gap: 10px;
-      list-style: none;
-      padding: 0;
+      h2 {
+        font-size: 20px;
+        margin-bottom: 10px;
+        color: $main-color; // Черный текст
+      }
 
-      li {
-        display: flex;
-        align-items: center;
-        font-size: 14px;
+      ul {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+        list-style: none;
+        padding: 0;
 
-        input {
-          margin-right: 10px;
+        li {
+          display: flex;
+          align-items: center;
+          font-size: 14px;
+          color: $main-color; // Черный текст
+
+          input {
+            margin-right: 10px;
+          }
         }
       }
     }
   }
 
   .time {
-    flex: 1; // Уже блок Time
-    margin-right: 20px; // Отступ от правого края
+    flex: 1;
+    margin-right: 20px;
     text-align: right;
 
     h2 {
@@ -108,11 +121,11 @@ body {
     .time-buttons {
       margin-bottom: 10px;
       display: flex;
-      flex-direction: column; // Кнопки расположены вертикально
-      align-items: flex-end; // Выравниваем кнопки вправо
+      flex-direction: column;
+      align-items: flex-end;
 
       button {
-        margin: 5px 0; // Отступы между кнопками
+        margin: 5px 0;
         padding: 8px 15px;
         font-size: 14px;
         cursor: pointer;
