@@ -104,6 +104,7 @@ body {
 .info .time .time-header h2 {
   font-size: 20px;
   margin: 0;
+  font-weight: bold;
 }
 .info .time p {
   font-size: 16px;
@@ -134,9 +135,24 @@ body {
   margin-top: 10px;
   text-align: right;
 }
-.info .time .timer-display p {
-  font-size: 16px;
+.info .time .timer-display .timer-header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
   margin-bottom: 10px;
+}
+.info .time .timer-display .timer-header .hourglass-icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+.info .time .timer-display .timer-header p {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+}
+.info .time .timer-display .timer-header p .timer-countdown {
+  font-weight: normal;
 }
 .info .time .timer-display .start {
   padding: 8px 15px;
@@ -150,41 +166,6 @@ body {
 }
 .info .time .timer-display .start:hover {
   background-color: rgb(144.5, 144.5, 144.5);
-}
-
-.preparation {
-  flex-grow: 1;
-}
-.preparation h2 {
-  font-size: 20px;
-  margin-bottom: 15px;
-}
-.preparation ol {
-  list-style: none;
-  counter-reset: step-counter;
-}
-.preparation ol li {
-  display: flex;
-  margin-bottom: 15px;
-}
-.preparation ol li .step-number {
-  width: 30px;
-  height: 30px;
-  background-color: #333;
-  color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 50%;
-  margin-right: 10px;
-  font-size: 14px;
-  font-weight: bold;
-  counter-increment: step-counter;
-  content: counter(step-counter);
-}
-.preparation ol li p {
-  margin: 0;
-  font-size: 14px;
 }
 
 footer {
