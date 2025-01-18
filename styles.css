@@ -208,22 +208,38 @@ body {
 }
 
 footer {
-  text-align: center;
-  margin-top: auto;
-  padding: 10px;
+  border-top: 1px solid #777;
+  padding: 10px 20px;
   background-color: #f4f4f4;
 }
-footer p {
+footer .footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+footer .footer-content p {
   font-size: 12px;
-  margin: 0;
   color: #333;
 }
-footer p a {
+footer .footer-content p a {
   color: #333;
   text-decoration: none;
 }
-footer p a:hover {
+footer .footer-content p a:hover {
   text-decoration: underline;
+}
+footer .footer-content .social-icons {
+  display: flex;
+  gap: 10px;
+}
+footer .footer-content .social-icons img {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+}
+footer .footer-content .social-icons img:hover {
+  opacity: 0.8;
 }
 
 /*# sourceMappingURL=styles.css.map */
