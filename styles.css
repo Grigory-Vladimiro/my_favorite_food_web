@@ -90,9 +90,20 @@ body {
   margin-right: 20px;
   text-align: right;
 }
-.info .time h2 {
-  font-size: 20px;
+.info .time .time-header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
   margin-bottom: 10px;
+}
+.info .time .time-header .time-icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+.info .time .time-header h2 {
+  font-size: 20px;
+  margin: 0;
 }
 .info .time p {
   font-size: 16px;
@@ -103,13 +114,11 @@ body {
   color: #333;
 }
 .info .time .time-buttons {
-  margin-bottom: 10px;
   display: flex;
-  flex-direction: column;
-  align-items: flex-end;
+  justify-content: flex-end;
+  gap: 10px;
 }
 .info .time .time-buttons button {
-  margin: 5px 0;
   padding: 8px 15px;
   font-size: 14px;
   cursor: pointer;
