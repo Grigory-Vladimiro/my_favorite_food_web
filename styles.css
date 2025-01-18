@@ -130,6 +130,27 @@ body {
 .info .time .time-buttons button:hover {
   background-color: rgb(144.5, 144.5, 144.5);
 }
+.info .time .timer-display {
+  margin-top: 10px;
+  text-align: right;
+}
+.info .time .timer-display p {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+.info .time .timer-display .start {
+  padding: 8px 15px;
+  font-size: 14px;
+  cursor: pointer;
+  background-color: #777;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  transition: background-color 0.2s ease;
+}
+.info .time .timer-display .start:hover {
+  background-color: rgb(144.5, 144.5, 144.5);
+}
 
 .preparation {
   flex-grow: 1;
