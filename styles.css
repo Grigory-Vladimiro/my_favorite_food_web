@@ -154,4 +154,18 @@ footer p a:hover {
   text-decoration: underline;
 }
 
+.image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ddd;
+  height: 120mm;
+}
+.image img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
 /*# sourceMappingURL=styles.css.map */
