@@ -189,8 +189,8 @@ body {
   align-items: flex-start;
 }
 .preparation .steps-grid .step .step-number {
-  width: 40px;
-  height: 40px;
+  width: 50px;
+  height: 50px;
   background-color: #777;
   color: white;
   font-size: 18px;
@@ -200,6 +200,7 @@ body {
   align-items: center;
   border-radius: 4px;
   margin-right: 10px;
+  flex-shrink: 0;
 }
 .preparation .steps-grid .step p {
   font-size: 16px;
