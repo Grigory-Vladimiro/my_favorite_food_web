@@ -91,29 +91,26 @@ body {
   margin-right: 20px;
   text-align: right;
 }
-.info .time .time-header {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  margin-bottom: 10px;
-}
-.info .time .time-header .time-icon {
-  width: 20px;
-  height: 20px;
-  margin-right: 10px;
-}
-.info .time .time-header h2 {
+.info .time h2 {
   font-size: 20px;
-  margin: 0;
+  margin-bottom: 10px;
   font-weight: bold;
 }
 .info .time p {
   font-size: 16px;
   margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
 }
 .info .time p .total-time {
   font-weight: bold;
   color: #333;
+}
+.info .time p .time-icon {
+  width: 20px;
+  height: 20px;
+  margin-left: 10px;
 }
 .info .time .time-buttons {
   display: flex;
@@ -121,8 +118,8 @@ body {
   gap: 10px;
 }
 .info .time .time-buttons button {
-  padding: 8px 15px;
-  font-size: 14px;
+  padding: 4px 8px;
+  font-size: 8px;
   cursor: pointer;
   background-color: #D9D9D9;
   color: #333;
@@ -156,8 +153,8 @@ body {
   font-weight: normal;
 }
 .info .time .timer-display .start {
-  padding: 8px 15px;
-  font-size: 14px;
+  padding: 4px 8px;
+  font-size: 8px;
   cursor: pointer;
   background-color: #D9D9D9;
   color: #333;
@@ -212,19 +209,17 @@ footer {
   padding: 10px 20px;
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
 footer .footer-content {
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  max-width: 900px;
-  margin: 0 auto;
 }
 footer .footer-content p {
   font-size: 12px;
   color: #333;
-  margin: 0;
 }
 footer .footer-content p a {
   color: #333;
@@ -246,4 +241,4 @@ footer .footer-content .social-icons img:hover {
   opacity: 0.8;
 }
 
-
+/*# sourceMappingURL=styles.css.map */
