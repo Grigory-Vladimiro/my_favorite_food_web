@@ -1,6 +1,6 @@
-$main-color: #333; 
-$secondary-color: #f4f4f4; 
-$highlight-color: #D9D9D9; 
+$main-color: #333;
+$secondary-color: #f4f4f4;
+$highlight-color: #D9D9D9;
 
 body {
   font-family: 'Roboto', Arial, sans-serif;
@@ -21,30 +21,19 @@ body {
   padding: 0;
   display: flex;
   flex-direction: column;
+}
 
-  header {
-    padding: 20px 0;
-    background: none;
-
-    h1 {
-      margin: 0;
-      font-size: 24px;
-      font-weight: bold;
-      text-align: left;
-      padding-left: 20px;
-      color: $main-color;
-    }
-  }
+header h1 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: left;
+  padding-left: 20px;
+  color: $main-color;
 }
 
 .image {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   height: 120mm;
-  z-index: 2;
-
   img {
     max-width: 100%;
     max-height: 100%;
@@ -58,42 +47,28 @@ body {
   padding: 10px 0;
 
   .ingredients-banner {
-    flex: 2;
-    position: relative;
     background-color: $highlight-color;
     border-radius: 20px;
-    margin-left: 20px;
-    margin-right: 10px;
     padding: 20px;
-    top: -30px;
-    z-index: 1;
+    flex: 2;
 
-    .ingredients {
-      position: relative;
+    .ingredients h2 {
+      text-align: left;
+      font-size: 20px;
+      margin-bottom: 10px;
+      color: $main-color;
+    }
 
-      h2 {
-        font-size: 20px;
-        margin-bottom: 10px;
-        text-align: left;
+    ul {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+
+      li {
+        font-size: 14px;
         color: $main-color;
-      }
-
-      ul {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 10px;
-        list-style: none;
-        padding: 0;
-
-        li {
-          display: flex;
-          align-items: center;
-          font-size: 14px;
-          color: $main-color;
-
-          input {
-            margin-right: 10px;
-          }
+        input {
+          margin-right: 10px;
         }
       }
     }
@@ -101,13 +76,11 @@ body {
 
   .time {
     flex: 1;
-    margin-right: 20px;
-    text-align: right;
+    text-align: center;
 
     h2 {
       font-size: 20px;
       margin-bottom: 10px;
-      font-weight: bold;
     }
 
     p {
@@ -115,29 +88,30 @@ body {
       margin-bottom: 10px;
       display: flex;
       align-items: center;
-      justify-content: flex-end;
+      justify-content: center;
 
-      .total-time {
-        font-weight: bold;
-        color: $main-color;
+      .time-icon,
+      .hourglass-icon {
+        width: 24px;
+        height: 24px;
+        margin-right: 8px; // Пробел между иконкой и текстом
       }
 
-      .time-icon {
-        width: 20px;
-        height: 20px;
-        margin-left: 10px;
+      .total-time,
+      .timer-countdown {
+        font-size: 18px;
+        font-weight: bold; // Жирный шрифт
       }
     }
 
     .time-buttons {
       display: flex;
-      justify-content: flex-end;
-      gap: 10px;
+      justify-content: center;
+      gap: 6px; // Расстояние между кнопками
 
       button {
-        padding: 4px 8px;
-        font-size: 8px;
-        cursor: pointer;
+        padding: 4px 6px; // Тоньше кнопки
+        font-size: 10px; // Меньший текст
         background-color: $highlight-color;
         color: $main-color;
         border: none;
@@ -151,40 +125,20 @@ body {
 
     .timer-display {
       margin-top: 10px;
-      text-align: right;
 
       .timer-header {
         display: flex;
+        justify-content: center;
         align-items: center;
-        justify-content: flex-end;
-        margin-bottom: 10px;
-
-        .hourglass-icon {
-          width: 20px;
-          height: 20px;
-          margin-right: 10px;
-        }
-
-        p {
-          font-size: 16px;
-          font-weight: bold;
-          margin: 0;
-
-          .timer-countdown {
-            font-weight: bold;
-          }
-        }
       }
 
       .start {
-        padding: 4px 8px;
-        font-size: 8px;
-        cursor: pointer;
+        padding: 4px 6px; // Тоньше кнопка
+        font-size: 10px;
         background-color: $highlight-color;
         color: $main-color;
         border: none;
-        border-radius: 20px;
-        transition: background-color 0.2s ease;
+        border-radius: 10px;
 
         &:hover {
           background-color: darken($highlight-color, 10%);
@@ -194,89 +148,34 @@ body {
   }
 }
 
-.preparation {
-  padding: 20px;
-
-  h2 {
-    font-size: 20px;
-    text-transform: uppercase;
-    margin-bottom: 20px;
-    text-align: left;
-    padding-left: 20px;
-  }
-
-  .steps-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-
-    .step {
-      display: flex;
-      align-items: flex-start;
-
-      .step-number {
-        width: 50px;
-        height: 50px;
-        background-color: $highlight-color;
-        color: $main-color;
-        font-size: 18px;
-        font-weight: bold;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border-radius: 4px;
-        margin-right: 10px;
-        flex-shrink: 0;
-      }
-
-      p {
-        font-size: 16px;
-        margin: 0;
-      }
-    }
-  }
-}
-
 footer {
   border-top: 1px solid $highlight-color;
   padding: 10px 20px;
   display: flex;
-  align-items: center;
   justify-content: space-between;
 
   .footer-content {
     display: flex;
     justify-content: space-between;
-    align-items: center;
     width: 100%;
+  }
 
-    p {
-      font-size: 12px;
-      color: $main-color;
-
-      a {
-        color: $main-color;
-        text-decoration: none;
-
-        &:hover {
-          text-decoration: underline;
-        }
+  p {
+    font-size: 12px;
+    color: $main-color;
+    a {
+      text-decoration: none;
+      &:hover {
+        text-decoration: underline;
       }
     }
+  }
 
-    .social-icons {
-      display: flex;
-      gap: 10px;
-
-      img {
-        width: 24px;
-        height: 24px;
-        cursor: pointer;
-
-        &:hover {
-          opacity: 0.8;
-        }
-      }
+  .social-icons img {
+    width: 24px;
+    height: 24px;
+    &:hover {
+      opacity: 0.8;
     }
   }
 }

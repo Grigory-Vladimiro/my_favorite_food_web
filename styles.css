@@ -150,7 +150,7 @@ body {
   margin: 0;
 }
 .info .time .timer-display .timer-header p .timer-countdown {
-  font-weight: normal;
+  font-weight: bold;
 }
 .info .time .timer-display .start {
   padding: 4px 8px;
